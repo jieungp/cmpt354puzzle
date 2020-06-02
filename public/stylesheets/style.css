@@ -3,7 +3,7 @@ table, th, td{
   border: 1px solid black;
   text-align: right;
   border-collapse: collapse;
-  padding: 5px;
+  padding: 3px;
 }
 
 thead{
