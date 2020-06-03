@@ -9,7 +9,7 @@
     <main>
       <p>
         Welcome to Jieung's Puzzle Game Page! <br>
-        <table>
+        <table id="wholetable">
           <thead>
             <th></th>
             <th>1<br> 1<br> &nbsp2</th>
@@ -300,11 +300,8 @@
           </tr>
         </table>
       </p>
-      <form action="" method="post">
-        <button onclick="restartgame()">Restart</button>
-        <input type="submit" name="Answer" value="Reveal Answer">
-        <input type="submit" name="Hint" value="Hint">
-      </form>
+      <button onclick="restartGame()">Restart</button>
+      <button onclick="giveSolution()">Reveal Answer</button>
       <script type="text/javascript" src="./script.js">
       </script>
     </main>

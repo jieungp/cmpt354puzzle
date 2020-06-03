@@ -1,11 +1,9 @@
-// function asc(a,b){
-//   return a-b;
-// }
-
 //Make something happen when clicked
-function restartgame() {
-  document.body.style.backgroundColor = "red";
-}
+var t = document.getElementsByTagName("td");
 
-var solution = document.getElementsByName("Answer");
-var hint = document.getElementsByName("Hint");
+function restartGame() {
+  //document.getElementsById("wholetable").style.backgroundColor="red";
+  for (var i = 0; i < t.length; i++) {
+    t[i].style.backgroundColor="turquoise";
+  }
+}
