@@ -2,6 +2,7 @@ var cells = document.getElementById("wholetable").getElementsByTagName("td");
 var score = document.getElementById("board").getElementsByTagName("td");
 var purpleLeft = 0;
 var numError = 0;
+var hintUsed = 0;
 restartGame();
 
 function restartGame() {
@@ -58,9 +59,25 @@ function finished() {
     alert("FAIL, You have not finished yet!");
     purpleLeft = 0;
   } else {
-    countError();
-    calculate();
+    if (hintUsed == 1) {
+      alert("You finished, but used a hint! No world record for you!")
+    } else {
+      countError();
+      calculate();
+    }
     giveSolution();
     numError = 0;
+    hintUsed = 0;
+  }
+}
+
+function hint() {
+  hintUsed = 1;
+  var hintCell = Math.floor(Math.random() * 256);
+  if (cells[hintCell].style.backgroundColor === "turquoise") {
+    cells[hintCell].click();
+  } else {
+    hintCell = Math.floor(Math.random() * 256);
+    hint();
   }
 }
