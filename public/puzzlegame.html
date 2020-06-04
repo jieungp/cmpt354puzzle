@@ -8,7 +8,17 @@
   <body>
     <main>
       <p>
-        Welcome to Jieung's Puzzle Game Page! <br>
+        <strong>Welcome to Jieung's Puzzle Game Page! </strong><br>
+        <p id="Rule">
+          <strong>How to play:</strong><br>
+            <span class="tab">The numbers from the table represent number of tiles you need to find. <br>
+            <span class="tab">You will need to hover over to the table cells and click in order to play. <br>
+            <span class="tab">Turquoise -> Unselected Tile <br>
+            <span class="tab">Purple    -> Correct Tile <br>
+            <span class="tab">White     -> Wrong Tile <br>
+            <span class="tab">Once you think you have finished, click the submit button to check. <br>
+            <span class="tab">Good Luck and Have Fun!<br>
+        </p>
         <table id="wholetable">
           <thead>
             <th></th>
@@ -296,10 +306,11 @@
             <td onclick="style.backgroundColor='#bf00ff';"></td>
             <td onclick="style.backgroundColor='#bf00ff';"></td>
             <td onclick="style.backgroundColor='#bf00ff';"></td>
-            <td onclick="style.backgroundColor='#bf00ff';"></td>
+            <td id="click?" onclick="style.backgroundColor='#bf00ff';"></td>
           </tr>
         </table>
       </p>
+      <button onclick="finished()">Submit</button>
       <button onclick="restartGame()">Restart</button>
       <button onclick="giveSolution()">Reveal Answer</button>
       <script type="text/javascript" src="./script.js">

@@ -1,4 +1,4 @@
-table, th, td{
+table, th, td {
   background-color: turquoise;
   border: 1px solid black;
   text-align: right;
@@ -6,10 +6,22 @@ table, th, td{
   padding: 3px;
 }
 
-thead{
+thead {
   vertical-align: bottom;
 }
 
-td:hover{
+td:hover {
   background-color: yellow;
+}
+
+.tab {
+  padding-left: 10px;
+}
+
+#Rule {
+  border: 1px solid black;
+  padding: 3px;
+  width: 550px;
+  position: absolute;
+  left: 450px;
 }
