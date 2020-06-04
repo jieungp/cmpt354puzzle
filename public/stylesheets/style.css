@@ -25,3 +25,13 @@ td:hover {
   position: absolute;
   left: 450px;
 }
+
+#board {
+  position: absolute;
+  left: 450px;
+  top: 300px;
+}
+
+.bold {
+  font-weight: bold;
+}

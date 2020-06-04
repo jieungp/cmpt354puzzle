@@ -1,5 +1,7 @@
-var cells = document.getElementsByTagName("td");
+var cells = document.getElementById("wholetable").getElementsByTagName("td");
+var score = document.getElementById("board").getElementsByTagName("td");
 var purpleLeft = 0;
+var numError = 0;
 restartGame();
 
 function restartGame() {
@@ -19,6 +21,28 @@ function alertMsg() {
   alert("CONGRATULATION, You have Won!");
 }
 
+function countError() {
+  for (var l = 0; l < cells.length; l++) {
+    if (cells[l].style.backgroundColor === "white") {
+      numError++;
+    }
+  }
+}
+
+function calculate() {
+  var name = window.prompt("Enter you name: ");
+  if (score[1].innerHTML === "NONE") {
+    score[1].innerHTML=name;
+    score[2].innerHTML=numError;
+  } else if (score[2].innerHTML - numError >= 0) {
+    alert("CONGRATULATION " + name + ", you beat the world record! :)");
+    score[1].innerHTML=name;
+    score[2].innerHTML=numError;
+  } else {
+    alert("Nice try " + name + ", you have not beaten world record :(");
+  }
+}
+
 function finished() {
   for (var k = 0; k < cells.length; k++) {
     if (cells[k].style.backgroundColor === "turquoise") {
@@ -34,6 +58,9 @@ function finished() {
     alert("FAIL, You have not finished yet!");
     purpleLeft = 0;
   } else {
+    countError();
+    calculate();
     giveSolution();
+    numError = 0;
   }
 }
