@@ -1,3 +1,4 @@
+//Please read README
 var cells = document.getElementById("wholetable").getElementsByTagName("td");
 var score = document.getElementById("board").getElementsByTagName("td");
 var purpleLeft = 0;
