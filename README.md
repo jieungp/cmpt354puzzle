@@ -3,4 +3,5 @@ Try to beat your own score in Nonogram Puzzle Game. Play [here](https://mycmpt27
 - Using hints will not save score once you submit.
 
 This App is created using **HTML/CSS/JavaScript**
+
 Developed by Jieung Park
