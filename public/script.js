@@ -78,7 +78,6 @@ function hint() {
   if (cells[hintCell].style.backgroundColor === "turquoise") {
     cells[hintCell].click();
   } else {
-    hintCell = Math.floor(Math.random() * 256);
     hint();
   }
 }
